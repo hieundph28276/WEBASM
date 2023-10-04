@@ -21,7 +21,7 @@
     </div>
   </div>
     <div class="box-2">
-        <a class="btn btn-primary" href="?url=list-form">Add</a>
+        <a class="btn btn-primary" href="?url=add-product">Add</a>
         <div class="card-box">
             <div class="table-responsive">
                 <table class="table mb-0">

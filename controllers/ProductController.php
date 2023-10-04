@@ -17,10 +17,9 @@ class ProductController
         // lấy dữ liệu từ model ra controller và tạo 1 view danh sách đổ xuống view
         //    echo "Đây là trang danh sách product";
     }
-    public function list_Form()
-    {
-        include_once "views/admin/add.php";
-    }
+    // public function list_Form()
+    // {
+    // }
     public function add_Product()
     {
         $product = new Product();
@@ -28,9 +27,11 @@ class ProductController
             $name = $_POST['name'];
             $price = $_POST['price'];
             $products = $product->addProduct($name, $price);
+            header("Location: index.php");
         }
-        $products = $product->getProduct();
-        include_once "views/admin/index.php";
+        include_once "views/admin/add.php";
+        // $products = $product->getProduct();
+        // include_once "views/admin/index.php";
     }
 
     public function edit_Product()
@@ -50,7 +51,8 @@ class ProductController
             $id = $_POST['id'];
             $name = $_POST['name'];
             $price = $_POST['price'];
-            $products = $product->updateProduct($id, $name, $price);
+            $product->updateProduct($id, $name, $price);
+            header("Location: index.php");
         }
     }
 
@@ -61,8 +63,9 @@ class ProductController
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $products = $product->deleteProduct($id);
-            $products = $product->getProduct();
-            include_once "views/admin/index.php";
+            header("Location: index.php");
+            // $products = $product->getProduct();
+            // include_once "views/admin/index.php";
         }
     }
 }

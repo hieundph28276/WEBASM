@@ -9,10 +9,10 @@ switch ($url) {
         $productController = new ProductController();
         $productController->listProduct();
         break;
-    case 'list-form':
-        $productController = new ProductController();
-        $productController->list_Form();
-        break;
+    // case 'list-form':
+    //     $productController = new ProductController();
+    //     $productController->list_Form();
+    //     break;
     case 'add-product':
         $productController = new ProductController();
         $productController->add_Product();

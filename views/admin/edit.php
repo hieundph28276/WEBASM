@@ -12,7 +12,7 @@
     <form action="?url=add-product" method="post">
     <div class="form-group">
             <label>ID</label>
-            <input type="text" name="id" value="<?php echo $products['id'] ?>" class="form-control">
+            <input type="text" name="" value="<?php echo $products['id'] ?>" class="form-control">
             <small class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
